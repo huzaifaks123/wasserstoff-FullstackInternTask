@@ -37,7 +37,7 @@ export const DataAsyncThunk = createAsyncThunk(
             const state = ThunkApi.getState()
             const filterString = createFilters(state.DataReducer.filters)
             console.log(filterString);
-            const response = await fetch(`http://localhost:3100/api/data?${filterString}`);
+            const response = await fetch(`https://wasserstoff-fullstackinterntask-4s11.onrender.com/api/data?${filterString}`);
             let data = await response.json();
             console.log("data", data);
             ThunkApi.dispatch(setData(data));
