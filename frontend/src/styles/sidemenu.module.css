@@ -1,0 +1,192 @@
+.sideMenuContainer {
+    position: sticky;
+    top: 6px;
+    height: 98vh;
+    overflow-y: auto;
+    color: black;
+    min-width: 20%;
+    max-width: fit-content;
+    width: 20%;
+    margin: 5px;
+    padding-left: 10px;
+    border: 2px solid #18a69f;
+    font-size: large;
+    display: flex;
+    box-shadow: 6px 4px 8px rgba(0, 0, 0, 0.1), inset 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navMenuCollapsed {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: 2;
+    text-wrap: nowrap;
+    background: #ec00e1;
+    z-index: 20;
+    min-height: 89vh;
+    max-height: 89vh;
+    max-width: fit-content;
+    width: 70%;
+    overflow-y: auto;
+}
+
+.filter_menu{
+    position: sticky;
+    width: 96%;
+    top: 6px;
+    padding: 10px;
+    background-color: rgb(31, 225, 231);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 6px 4px 8px rgba(0, 0, 0, 0.1), inset 1px 1px 4px rgba(0, 0, 0, 0.1)
+}
+
+.activeFilter{
+    border: 1px solid rgb(237 42 240);
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.removeFilter{
+    position: absolute;
+    transform: translate(50%,-50%);
+    color: white;
+    font-size: 400;
+    cursor: pointer;
+}
+
+.filterBtn {
+    color: white;
+    border: none;
+    background-color: rgb(237 42 240);
+    width: 80px;
+    height: 50%;
+    font-weight: 700;
+    box-shadow: 6px 4px 8px rgba(0, 0, 0, 0.1), inset 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+.filterBtn:hover {
+    color: rgba(255, 255, 255, 0.836);
+}
+
+.sideMenuContainer::-webkit-scrollbar,.navMenuCollapsed::-webkit-scrollbar {
+    width: 6px;
+    height: 12px;
+}
+
+.sideMenuContainer::-webkit-scrollbar-track ,.navMenuCollapsed::-webkit-scrollbar{
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.sideMenuContainer::-webkit-scrollbar-thumb ,.navMenuCollapsed::-webkit-scrollbar{
+    background: #7c9cca;
+    border-radius: 10px;
+}
+
+.sideMenuContainer::-webkit-scrollbar-thumb:hover ,.navMenuCollapsed::-webkit-scrollbar{
+    background: #7c9cca;
+}
+
+.navMenuCollapsed .folder span {
+    margin-left: 30px;
+}
+
+.treeNode_texts {
+    width: 12rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.treeNode {
+    margin: 0;
+    height: 0;
+    text-wrap: nowrap;
+    overflow: hidden;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+}
+
+.treeNodeVisible {
+    margin: 0;
+    padding-left: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding-right: 15px;
+    display: flex;
+    height: auto;
+    overflow: visible;
+    transition: .2s all ease-in-out;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.treeNodeVisible input, .treeNodeVisible label{
+    cursor: pointer;
+}
+
+.ActiveTreeNodeVisible {
+    color: #ec00e1;
+    margin: 0;
+    padding-left: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding-right: 15px;
+    height: auto;
+    overflow: visible;
+    transition: .2s all ease-in-out;
+    font-weight: 400;
+}
+
+.folder {
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    margin-right: 10px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.folder span {
+    display: flex;
+    align-items: center;
+    transition: .2s all ease-in-out;
+}
+
+.folder .open {
+    display: flex;
+    align-items: center;
+    transform: rotate(90deg);
+    transition: .2s all ease-in-out;
+}
+
+.folder span .img {
+    width: 16px;
+    height: 16px;
+}
+
+.navlink {
+    text-decoration: none;
+    color: black;
+}
+
+.treeNodeVisible:hover,
+.ActiveTreeNodeVisible:hover,
+.folder:hover {
+    color: white;
+    margin-right: 10px;
+    background: linear-gradient(135deg, #62e9eb 0%, #ffa6fb 100%);
+    border-radius: 5px;
+    transition-duration: 0s;
+    cursor: pointer;
+}
+
+.hover {
+    width: 16px;
+    height: 16px;
+    filter: invert();
+}

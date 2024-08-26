@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fac9c852.css",
+    "main.js": "/static/js/main.b704905d.js",
+    "static/media/spaceX_logo2.jpeg": "/static/media/spaceX_logo2.6df230c3661a0975c4cb.jpeg",
+    "index.html": "/index.html",
+    "main.fac9c852.css.map": "/static/css/main.fac9c852.css.map",
+    "main.b704905d.js.map": "/static/js/main.b704905d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fac9c852.css",
+    "static/js/main.b704905d.js"
+  ]
+}
