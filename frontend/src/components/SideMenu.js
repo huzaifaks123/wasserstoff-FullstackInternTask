@@ -2,7 +2,7 @@
 import styles from '../styles/sidemenu.module.css';
 
 // import outlet to change dom without reloading tab
-import { Link, Outlet } from "react-router-dom";
+import {Outlet } from "react-router-dom";
 
 // import hook for state
 import { useEffect, useState } from 'react';
@@ -83,7 +83,7 @@ const SideMenu = ({ filterData }) => {
             <div onMouseEnter={() => changeLogo(node.query)} onMouseLeave={() => changeLogo("")} onClick={() => toggleTree(node.query)} className={styles.folder}>
               <p className='me-4 my-auto'>{node.name}</p>
               <span className={isCollapsed.includes(node.query) ? styles.open : ""}>
-                <img className={color == node.query ? styles.hover : styles.img} src='https://cdn-icons-png.flaticon.com/128/271/271228.png' alt='icon' />
+                <img className={color === node.query ? styles.hover : styles.img} src='https://cdn-icons-png.flaticon.com/128/271/271228.png' alt='icon' />
               </span>
             </div>
             <div>{renderTreeNodes(node.children, node)}</div>

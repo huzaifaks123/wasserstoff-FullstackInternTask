@@ -29,7 +29,6 @@ export default function SWOTChart() {
         svg.selectAll("*").remove(); // remove any existing content in the svg
 
         // Define positions and sizes for each SWOT category
-        const categories = ['Strengths', 'Weaknesses', 'Opportunities', 'Threats'];
         const positions = [
             { x: 0, y: 0, label: "Strengths", color: "rgb(70, 31, 117)" },  // Dark purple
             { x: width / 2, y: 0, label: "Weaknesses", color: "rgb(79, 80, 178)" }, // Blue

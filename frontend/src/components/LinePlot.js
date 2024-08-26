@@ -10,19 +10,8 @@ export default function LinePlot({ data }) {
     // define ref for svg
     const svgRef = useRef();
     
-    console.log("Linechart", data);
-    
-    // function to fetch and log data
-    function fetchData(){
-        data.map((item) => {
-            console.log(item.intensity," K ", item.end_year);
-        });
-    }
-    
     // update data on the chart on component mount and update
     useEffect(() => {
-        // fetch and log data
-        fetchData();
 
         // select svg component using ref
         const svg = d3.select(svgRef.current);

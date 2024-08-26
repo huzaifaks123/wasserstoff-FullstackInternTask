@@ -3,7 +3,7 @@ import styles from '../styles/navbar.module.css';
 import style from '../styles/sidemenu.module.css';
 
 // import routing element to render with reloading tab
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 // import necessory hooks
 import { useDispatch, useSelector } from 'react-redux';
@@ -106,7 +106,7 @@ const Navbar = () => {
                         <div onMouseEnter={() => changeLogo(node.query)} onMouseLeave={() => changeLogo("")} onClick={() => toggleTree(node.query)} className={style.folder}>
                             <p className='me-4 my-auto'>{node.name}</p>
                             <span className={isCollapsed.includes(node.query) ? style.open : ""}>
-                                <img className={color == node.query ? style.hover : style.img} src='https://cdn-icons-png.flaticon.com/128/271/271228.png' alt='icon' />
+                                <img className={color === node.query ? style.hover : style.img} src='https://cdn-icons-png.flaticon.com/128/271/271228.png' alt='icon' />
                             </span>
                         </div>
                         <div>{renderTreeNodes(node.children, node)}</div>
@@ -135,7 +135,7 @@ const Navbar = () => {
                         aria-expanded={show}
                         aria-label="Toggle navigation"
                     >
-                        <span><img src='https://cdn-icons-png.flaticon.com/128/566/566737.png' style={{width : "35px", height : "35px"}}/></span>
+                        <span><img src='https://cdn-icons-png.flaticon.com/128/566/566737.png' alt='icon' style={{width : "35px", height : "35px"}}/></span>
                     </button>
 
                     <div className={`navbar-nav z-3 rounded ${style.navMenuCollapsed} ${show ? "show" : ""}`} id="navbarSupportedContent">
